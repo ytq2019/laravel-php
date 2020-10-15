@@ -24,6 +24,8 @@ RUN apk add --no-cache --virtual .build-deps \
     && pecl install mcrypt-1.0.1 \
     && pecl install redis-3.1.4 \
     && docker-php-ext-enable imagick \
+        mcrypt \
+        redis \
     && docker-php-ext-install \
         bcmath \
         curl \

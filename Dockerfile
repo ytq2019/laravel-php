@@ -22,8 +22,8 @@ RUN apk add --no-cache --virtual .build-deps \
         icu-dev \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
-    && docker-php-ext-install \
         mcrypt \
+    && docker-php-ext-install \
         bcmath \
         curl \
         iconv \

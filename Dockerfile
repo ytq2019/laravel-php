@@ -11,6 +11,7 @@ RUN apk add --no-cache --virtual .build-deps \
         postgresql-dev \
         sqlite-dev \
     && apk add --no-cache \
+        libmcrypt-dev \
         curl \
         git \
         imagemagick \
@@ -22,7 +23,7 @@ RUN apk add --no-cache --virtual .build-deps \
     && pecl install imagick \
     && docker-php-ext-enable imagick \
     && docker-php-ext-install \
-        iconv mcrypt \
+        mcrypt \
         bcmath \
         curl \
         iconv \
